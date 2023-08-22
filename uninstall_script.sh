@@ -171,7 +171,7 @@ sudo snap install flutter --classic
 sudo snap install code --classic
 sudo snap install telegram-desktop
 
-# Disable and stop services
+# Disable and stop services and permission
 echo -e "${WHITE}${line}"
 echo -e "|                                |"
 echo -e "| Disabling and stopping services|"
@@ -180,6 +180,13 @@ echo -e "${line}"
 sudo systemctl disable snapd.service
 sudo systemctl stop systemd-networkd.service
 sudo systemctl disable systemd-networkd.service
+
+# Get the default system username
+default_user=$(whoami)
+
+# Change permissions and ownership
+sudo chmod -R 755 /media/$default_user
+sudo chown -R $default_user:$default_user /media/$default_user
 
 echo -e "${line}"
 echo -e "|                                |"
