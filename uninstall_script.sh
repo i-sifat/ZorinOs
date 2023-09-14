@@ -150,36 +150,15 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] http
 sudo apt update
 sudo apt install brave-browser
 
-# Install snap
-if ! (which snap) 2>/dev/null; then
-    echo -e "${WHITE}${line}"
-    echo -e "|                                |"
-    echo -e "| Installing Snap                |"
-    echo -e "|                                |"
-    echo -e "${line}"
-    sudo apt install snapd
-fi
-
-# Install snap packages
-echo -e "${WHITE}${line}"
-echo -e "|                                |"
-echo -e "| Installing Snap packages       |"
-echo -e "|                                |"
-echo -e "${line}"
-sudo snap install wps-2019-snap
-sudo snap install flutter --classic
-sudo snap install code --classic
-sudo snap install telegram-desktop
-
 # Disable and stop services
-echo -e "${WHITE}${line}"
-echo -e "|                                |"
-echo -e "| Disabling and stopping services|"
-echo -e "|                                |"
-echo -e "${line}"
-sudo systemctl disable snapd.service
-sudo systemctl stop systemd-networkd.service
-sudo systemctl disable systemd-networkd.service
+#echo -e "${WHITE}${line}"
+#echo -e "|                                |"
+#echo -e "| Disabling and stopping services|"
+#echo -e "|                                |"
+#echo -e "${line}"
+#sudo systemctl disable snapd.service
+#sudo systemctl stop systemd-networkd.service
+#sudo systemctl disable systemd-networkd.service
 
 echo -e "${line}"
 echo -e "|                                |"
