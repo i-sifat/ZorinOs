@@ -9,13 +9,13 @@ if [ -f "/usr/bin/telegram-desktop" ]; then
 fi
 
 # Download the Telegram installer.
-wget https://tdesktop.com/linux
+wget https://tdesktop.com/linux/tsetup.4.14.9.tar.xz
 
 # Extract the Telegram installer.
-tar -xzvf telegram-linux
+tar -xJvf tsetup.4.14.9.tar.xz
 
 # Move the Telegram binary to the /usr/bin directory.
-sudo mv telegram-linux/Telegram /usr/bin/telegram-desktop
+sudo mv Telegram/telegram /usr/bin/telegram-desktop
 
 # Create a desktop launcher for Telegram.
 echo "[Desktop Entry]" > telegram.desktop
