@@ -15,3 +15,5 @@ rm Motrix_1.8.19_amd64.deb
 
 echo "Motrix Download Manager has been installed."
 
+// chmod +x motrix.sh
+// sudo ./motrix.sh
